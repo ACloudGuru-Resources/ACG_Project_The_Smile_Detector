@@ -12,11 +12,12 @@ def LoadImage(imgPath):
     bin_img = stream.getvalue()
     return bin_img
 
+apiKey = '<INSERT KEY HERE>'
+region = "westeurope"
+baseEndpoint = "https://"+region+".api.cognitive.microsoft.com/face/v1.0"
 
-API_KEY = '3efd844fe3d943148f67cf7f0820c224'
-headers = {'Content-Type': 'application/json', 'Ocp-Apim-Subscription-Key': API_KEY}    
-headersStream = {'Content-Type': 'application/octet-stream', 'Ocp-Apim-Subscription-Key': API_KEY}
-baseEndpoint = 'https://westeurope.api.cognitive.microsoft.com/face/v1.0'
+headers = {'Content-Type': 'application/json', 'Ocp-Apim-Subscription-Key': apiKey}    
+headersStream = {'Content-Type': 'application/octet-stream', 'Ocp-Apim-Subscription-Key': apiKey}
 
 personGroupName = "cloudgurus"
 personNames = {'Lars','Ryan'}
@@ -34,11 +35,10 @@ else:
     print("Error")
     pprint.pprint(createPersongroupResponse.json())
 
-
-ENDPOINT = baseEndpoint + "/persongroups/{0}/persons".format(personGroupName)
+createPersonEndpoint = baseEndpoint + "/persongroups/{0}/persons".format(personGroupName)
 
 for personName in personNames:
-    createPersonResponse = requests.post(url=ENDPOINT, headers=headers,json=dict(name = personName))
+    createPersonResponse = requests.post(url=createPersonEndpoint, headers=headers,json=dict(name = personName))
     if createPersonResponse.status_code == 200:
 
         # 2 - Create a person in the persongroup
@@ -68,5 +68,3 @@ if trainPersonGroupResponse.status_code == 202:
     print("Persongroup {0} trained".format(personGroupName))
 else:
     print(trainPersonGroupResponse.json())
-
-
