@@ -6,5 +6,5 @@ Hi Cloud Guru, awesome you are going to run my project. But before you get start
 
 - Install Python 3.6.X [Download](https://www.python.org/downloads/release/python-369/)
 - Install Pillow [View project](https://pypi.org/project/Pillow/)
-- Install OpenCV [View project](https://pypi.org/project/opencv-python/)\
+- Install OpenCV [View project](https://pypi.org/project/opencv-python/)
 - Install Requests [View project](https://pypi.org/project/requests/)
