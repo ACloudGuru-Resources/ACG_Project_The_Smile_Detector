@@ -12,19 +12,17 @@ def LoadImage(imgPath):
     bin_img = stream.getvalue()
     return bin_img
 
-apiKey = '<INSERT KEY HERE>'
-region = "westeurope"
-baseEndpoint = "https://"+region+".api.cognitive.microsoft.com/face/v1.0"
-
-headers = {'Content-Type': 'application/json', 'Ocp-Apim-Subscription-Key': apiKey}    
-headersStream = {'Content-Type': 'application/octet-stream', 'Ocp-Apim-Subscription-Key': apiKey}
+API_KEY = '<INSERT KEY HERE>'
+headers = {'Content-Type': 'application/json', 'Ocp-Apim-Subscription-Key': API_KEY}    
+headersStream = {'Content-Type': 'application/octet-stream', 'Ocp-Apim-Subscription-Key': API_KEY}
+baseEndpoint = "<INSERT ENDPOINT HERE>"
 
 personGroupName = "cloudgurus"
 personNames = {'Lars','Ryan'}
 
 # Delete a person group
-ENDPOINT = baseEndpoint+"/persongroups/cloudgurus"
-requests.delete(url=ENDPOINT, headers=headers)
+#ENDPOINT = baseEndpoint+"/persongroups/cloudgurus"
+#requests.delete(url=ENDPOINT, headers=headers)
 
 # 1 - Create a person group
 ENDPOINT = baseEndpoint+"/persongroups/{0}".format(personGroupName)
