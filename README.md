@@ -10,3 +10,8 @@ Hi Cloud Guru, awesome you are going to run my project. But before you get start
 - Install Pillow [View project](https://pypi.org/project/Pillow/)
 - Install OpenCV [View project](https://pypi.org/project/opencv-python/)
 - Install Requests [View project](https://pypi.org/project/requests/)
+
+### Files in the repository
+
+- face_detection.py - Final file after the project (including detection and face identification)
+- face_detection_only.py - File after the first part of the project (face detection only)
