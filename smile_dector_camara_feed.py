@@ -4,7 +4,7 @@ from PIL import Image,ImageDraw
 import requests
 import os
 
-API_KEY = '1794038942414740966ef35692d7665a'  # Replace with a valid Subscription Key here.
+API_KEY = '<INSERT API KEY HERE>'  # Replace with a valid Subscription Key here.
 ENDPOINT = 'https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect'
 
 args = {
