@@ -2,6 +2,8 @@
 
 Hi Cloud Guru, awesome you are going to run my project. But before you get started, please make sure to get your environment ready.
 
+**This project only works on Windows 10*
+
 ### Get your enviroment ready
 
 - Install Python 3.6.X [Download](https://www.python.org/downloads/release/python-369/)
