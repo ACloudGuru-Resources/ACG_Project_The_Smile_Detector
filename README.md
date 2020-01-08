@@ -17,3 +17,6 @@ Hi Cloud Guru, awesome you are going to run my project. But before you get start
 - face_detection_only.py - File after the first part of the project (face detection only)
 - face_train.py - Final file after the project for training the face api
 - smile_dector_camara_feed.py - The Smile detector, final file
+
+### Docs
+- Official documentation on Microsoft Docs - [Go to docs](https://aka.ms/face-api-docs)
